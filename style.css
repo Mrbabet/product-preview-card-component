@@ -1,171 +1,131 @@
-:root{
-
-    --color-white:#fff;
-    --color-cream:#f2eae2;
-    --color-grey:#6C7289;
-    --color-deep-aquamarine:#3D8168; /*green*/
-    --color-deep-aquamarine-hover: #1A4032;
-    --color-black:#1C232B;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #f2eae2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+.img-section {
+  background-image: url(/images/image-product-mobile.jpg);
+  max-width: 343px;
+  max-height: 240px;
+  aspect-ratio: 343/240;
+  background-size: cover;
+}
+span {
+  color: #6c7289;
+}
+h1 {
+  padding-block: 0.5em;
 }
 
-*{
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color:var(--color-cream);
-}
-
-span,
-h1,
-h2,
-p{
-    
-    margin: 1.5rem;
-    
+main {
+  margin: 0 auto;
+  max-width: 343px;
+  min-height: 611px;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: white;
 }
 
-span
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    color: var(--color-grey);
+header,
+.description,
+.store {
+  padding-block: 1em;
+  padding-inline: 1em;
 }
-h1
-{
-    font-family:'Fraunces', serif;
-    font-size: 2rem;  
-    color: var(--color-black);
+.description {
+  padding-block: 0;
+  color: #6c7289;
 }
-p
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.875rem;
-    line-height: 1rem;
-    color: var(--color-grey);
-    line-height: 2rem;
-    
+.price {
+  display: flex;
+  align-items: center;
 }
-.card-text{
-    background-color: var(--color-white);
-    width: 23.4375rem;
-    border-radius: 0 0 1.5rem 1.5rem;
+.Price-now {
+  color: #3d8168;
+  font-size: 2rem;
+  margin-right: 1.5em;
+}
 
-    
-
+.button-placement {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.price{
+button {
+  margin-block: 3em;
+  padding: 1em 8em 1em 8em;
+  max-width: 343px;
+  border-radius: 1em;
+  background: #3d8168;
+  color: white;
+  border: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+button span {
+  margin-left: 1em;
+  color: white;
+}
+button:hover {
+  background-color: #1f4235;
+}
+.attribution {
+  margin: 3em;
+}
+@media screen and (min-width: 600px) {
+  main {
+    all: unset;
+    max-width: 600px;
+    max-height: 450px;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: white;
     display: flex;
-    align-items:center ;
-}
-
-.price-now
-{
-    font-family: 'Fraunces', serif;
-    font-size: 2rem;
-    color:var(--color-deep-aquamarine);
-   
-
-}
-.price-then
-{
-    font-family: 'Fraunces', serif;
-    font-size: 0.875rem; 
-    color: var(--color-grey);
-
-}
-.container{
-    
-    background-color:var(--color-cream);
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    
-}
-img{
-    width:23.4375rem;
-    height:20rem;
-    border-radius: 1.5rem 1.5rem 0 0;   
-}
-
-.desktop-image
-{
-    display: none;
-}
-
-
-.card{
-    margin-inline: 1em;
+    flex-direction: row;
+    position: relative;
+  }
+  header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+  }
 
-    
-}
-
-.Add__to__cart__box
-{
-    height:  3rem;
-    width: 18.75rem;
-    background-color:#3d8168 ;
-    border-radius: 0.5rem;
-    margin: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 1s ease-out;
-    cursor: pointer;
-    
-}
-.Add__to__cart__box:hover
-{
-    background-color:var(--color-deep-aquamarine-hover)
-}
-.cart__text
-{
+  .img-section {
+    all: unset;
+    background-image: url(/images/image-product-desktop.jpg);
+    width: 300px;
+    height: 450px;
+    background-size: cover;
+    aspect-ratio: 450/300;
+  }
+  button {
+    margin-block: 3em;
+    padding: 1.5em 5em 1.5em 5em;
+    max-width: 343px;
+    border-radius: 1em;
+    background: #3d8168;
     color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.875rem;
-    cursor: pointer;  
-    
+    border: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  p {
+    padding-block: 0.5em;
+  }
+  h1 {
+    font-size: 2.3rem;
+    padding-block: 0.2em;
+  }
 }
-
-/* Media Queries*/
-
-@media (min-width: 50em){
-    .card{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;   
-    }
-}
-@media (min-width: 50em){
-    .card-text{
-        background-color: var(--color-white);
-        border-radius: 0rem 1.5rem 1.5rem 0rem;
-        width: 25rem;
-        height: 37.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        
-    }
-
-}
-@media (min-width: 50em){
-    img{
-        border-radius: 1.5rem 0rem 0rem 1.5rem;
-        display: none;
-        
-    }
-    .desktop-image{
-        display: flex;
-        width: 25rem;
-        height: 37.5rem;
-    }
-}
-
-
-
