@@ -11,6 +11,7 @@ body {
   height: 100vh;
   width: 100vw;
   flex-direction: column;
+  margin-top: 2em;
 }
 .img-section {
   background-image: url(/images/image-product-mobile.jpg);
@@ -88,13 +89,13 @@ button:hover {
   main {
     all: unset;
     max-width: 600px;
-    max-height: 450px;
+    min-height: 450px;
     border-radius: 1em;
     overflow: hidden;
     background-color: white;
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: absolute;
   }
   header {
     display: flex;
@@ -105,7 +106,7 @@ button:hover {
     all: unset;
     background-image: url(/images/image-product-desktop.jpg);
     width: 300px;
-    height: 450px;
+    min-height: 450px;
     background-size: cover;
     aspect-ratio: 450/300;
   }
